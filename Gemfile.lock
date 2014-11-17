@@ -1,15 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.6)
     amazon-ecs (2.2.5)
       nokogiri (~> 1.4)
       ruby-hmac (~> 0.3)
+    json (1.8.1)
+    mime-types (1.25.1)
     mini_portile (0.6.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    rdoc (4.1.2)
+      json (~> 1.4)
+    rest-client (1.6.8)
+      mime-types (~> 1.16)
+      rdoc (>= 2.4.2)
     ruby-hmac (0.4.0)
     shotgun (0.9)
       rack (>= 1.0)
@@ -18,6 +26,10 @@ GEM
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
     tilt (1.4.1)
+    unirest (1.1.2)
+      addressable (~> 2.3.5)
+      json (~> 1.8.1)
+      rest-client (~> 1.6.7)
 
 PLATFORMS
   ruby
@@ -26,3 +38,4 @@ DEPENDENCIES
   amazon-ecs
   shotgun
   sinatra
+  unirest
