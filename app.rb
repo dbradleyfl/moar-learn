@@ -29,6 +29,25 @@ class AmazonAPI
 	end
 end
 
+class HPIdolAPI
+	$apikey= HP_IDOL_KEY_CODE
+	$url="http://api.idolondemand.com"
+
+	def self.get_similar_topics(handler, data=Hash.new)
+		similar_topics = []
+
+	    data[:apikey]=$apikey
+	    response=Unirest.post "#{$url}/1/api/sync/#{handler}/v1", 
+	                        headers:{ "Accept" => "application/json" }, 
+	                        parameters: data
+	    response.body["entities"].each do |similar|
+			similar_topics << similar["text"]
+		end
+
+		similar_topics
+	end
+
+end
 
 # controllers / routes
 
@@ -36,7 +55,14 @@ get '/' do
   erb :index
 end
 
-get '/search' do
+get '/similar_topics' do
+	@query = params[:query]
+
+	@similar_topics = HPIdolAPI.get_similar_topics('findrelatedconcepts',{:text => @query })
+	erb :similar_topics
+end
+
+get '/search/:query' do
 	@query = params[:query]
 
 	@query_results = AmazonAPI.getBooks(@query)

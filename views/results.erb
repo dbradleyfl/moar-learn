@@ -1,4 +1,5 @@
-<h1 class="text-center"><a class="text-success" href="/">Go Back For Moar</a></h1>
+<h1 class="text-center text-success">Books About <%= @query %></h1>
+<h4 class="text-center"><a class="text-muted" href="/">Go Back For Moar</a></h4>
 
 <% @query_results.each do |product| %>
 	<a href="<%= product[:url] %>">
