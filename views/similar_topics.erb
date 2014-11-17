@@ -1,0 +1,9 @@
+<h1 class="text-center text-success">Topics Similar to <%= @query %></h1>
+<h4 class="text-center text-success">Pick one you would like to learn "moar" about!</h4>
+
+<% @similar_topics.each do |topic| %>
+
+	<a href="/search/<%= topic %>"><h3 class="text-center text-muted"><%= topic %></h3></a>
+	<br>
+
+<% end %>
