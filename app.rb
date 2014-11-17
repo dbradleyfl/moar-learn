@@ -3,17 +3,23 @@ require 'rubygems'
 require 'sinatra'
 require 'shotgun'
 require 'amazon/ecs'
+require 'Unirest'
 
+require_relative 'keys.rb'
 
 #config
 Amazon::Ecs.configure do |options|
-  options[:associate_tag] = 'dbradleyfl-20'
-  options[:AWS_access_key_id] = 'AKIAJSO6UUPWHVNGORKA'
-  options[:AWS_secret_key] = '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'
+  options[:associate_tag] = AMAZON_TRACKING_ID
+  options[:AWS_access_key_id] = AMAZON_ACCESS_KEY_CODE
+  options[:AWS_secret_key] = AMAZON_SECRET_KEY_CODE
 end
 
 
-# routes
+
+
+
+
+# controllers / routes
 
 get '/' do
   erb :index
