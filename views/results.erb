@@ -1,0 +1,10 @@
+<h1 class="text-center"><a class="text-success" href="/">Go Back For Moar</a></h1>
+
+<% @query_results.each do |product| %>
+	<a href="<%= product[:url] %>">
+		<h2 class="text-center text-muted"><%= product[:title] %></h1>
+		<button class="btn btn-success center-block">Buy on Amazon</button>
+	</a>
+	<br>
+	<br>
+<% end %>
