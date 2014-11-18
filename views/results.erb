@@ -1,13 +1,14 @@
-<div class="col-md-8 col-md-offset-2">	
-	<h1 class="text-center">Books About <%= @query.capitalize %></h1>
-	<h4 class="text-center"><a class="text-muted" href="/">Go Back For Moar</a></h4>
-
+<div class="col-md-6 col-md-offset-3 margin-top-50">
+	<h1 class="text-center logo">Moar Learn!</h1>	
+	<h3 class="text-center logo">About <%= @query.capitalize %></h3>
+	<br>
 	<% @query_results.each do |product| %>
-		<a href="<%= product[:url] %>">
-			<h2 class="text-center text-muted"><%= product[:title] %></h2>
-			<button class="btn btn-success center-block">Buy on Amazon</button>
-		</a>
-		<br>
+		<a class="text-center text-muted" href="<%= product[:url] %>" target="_blank"><h2><%= product[:title] %></h2></a>
+		<button class="btn btn-success center-block" href="<%= product[:url] %>">Buy on Amazon</button>
 		<br>
 	<% end %>
+</div>
+
+<div class="top-button">
+  <a class="btn btn-success" href="/">Start Over</a>
 </div>

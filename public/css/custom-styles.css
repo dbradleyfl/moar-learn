@@ -6,29 +6,30 @@
 	margin-top: 30px;
 }
 
+.margin-top-50{
+	margin-top: 50px;
+}
+
 .big-top-margin{
 	margin-top: 15%;    
 }
 
 a:hover{
-	text-decoration: none;
+	color: green;
 }
 
-.help{
-	margin-left: -27px;
+.top-button{
+	margin-left: -55px;
 	margin-top: -17px;
 	position: fixed;
-	bottom: 30px;
+	top: 30px;
 	left: 90%;
 }
 
 footer{
-	padding: 10px;
-	margin-left: -200px;
-	margin-top: -17px;
-	position: fixed;
-	bottom: 100px;
-	left: 50%;
+	padding: 15px;
+	position: relative;
+	top: 100px;
 }
 
 
