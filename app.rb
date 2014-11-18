@@ -3,7 +3,7 @@ require 'rubygems'
 require 'sinatra'
 require 'shotgun'
 require 'amazon/ecs'
-require 'Unirest'
+require 'unirest'
 
 require_relative 'keys.rb'
 
@@ -68,4 +68,12 @@ get '/search/:query' do
 	@query_results = AmazonAPI.getBooks(@query)
 
 	erb :results
+end
+
+error do
+	redirect '/'
+end
+
+not_found do
+	redirect '/'
 end
