@@ -1,9 +1,10 @@
-<h1 class="text-center text-success">Topics Similar to <%= @query %></h1>
-<h4 class="text-center text-success">Pick one you would like to learn "moar" about!</h4>
+<div class="col-md-8 col-md-offset-2">
+	<h1 class="text-center">Here are some topics similar to "<%= @query.capitalize %>" that you might be interested in.</h1>
 
-<% @similar_topics.each do |topic| %>
+	<% @similar_topics.each_with_index do |topic, index| %>
 
-	<a href="/search/<%= topic %>"><h3 class="text-center text-muted"><%= topic %></h3></a>
-	<br>
+		<a href="/search/<%= topic.downcase %>"><h3 class="text-center text-success"><%= (index+1).to_s + ". " + topic.capitalize %></h3></a>
+		<br>
 
-<% end %>
+	<% end %>
+</div>	

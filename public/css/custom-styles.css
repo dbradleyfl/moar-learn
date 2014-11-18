@@ -13,3 +13,28 @@
 a:hover{
 	text-decoration: none;
 }
+
+.help{
+	margin-left: -27px;
+	margin-top: -17px;
+	position: fixed;
+	bottom: 30px;
+	left: 90%;
+}
+
+footer{
+	padding: 10px;
+	margin-left: -200px;
+	margin-top: -17px;
+	position: fixed;
+	bottom: 100px;
+	left: 50%;
+}
+
+
+/*remove the blue glow*/
+.btn:focus,.btn:active,.btn:hover,.btn:link{
+	outline: none;
+	box-shadow:none;
+	border:1px solid #ccc;
+}
