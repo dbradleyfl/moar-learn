@@ -41,7 +41,7 @@ class HPIdolAPI
 	                        headers:{ "Accept" => "application/json" }, 
 	                        parameters: data
 	    response.body["entities"].each do |similar|
-			similar_topics << similar["text"]
+			similar_topics << similar["text"] unless similar["text"].downcase == data[:text].downcase
 		end
 
 		similar_topics
