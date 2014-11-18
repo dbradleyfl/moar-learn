@@ -11,8 +11,9 @@ Moar-Learn!
 - **[Amazon Product Advertising API](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html)**
 
 ##Also Used
-- **[Sinatra](www.sinatrarb.com)**
-- **[Twitter Bootstrap](getbootstrap.com)**
+- **[Sinatra](http://www.sinatrarb.com)**
+- **[Twitter Bootstrap](http://getbootstrap.com)**
+- **[Heroku](http://heroku.com)**
 
 
 ##The App
