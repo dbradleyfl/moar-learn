@@ -22,7 +22,7 @@ class AmazonAPI
 
 		res.items.each do |item|
 		  # retrieve string value using XML path
-		query_results << {title: item.get('ItemAttributes/Title'), url: item.get('DetailPageURL')}
+		query_results << {title: item.get('ItemAttributes/Title'), url: item.get('DetailPageURL'),author: item.get('ItemAttributes/Author')}
 		end
 
 		return query_results
