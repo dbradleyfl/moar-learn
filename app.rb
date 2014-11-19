@@ -78,6 +78,8 @@ get '/similar_topics' do
 		@similar_topics = HPIdolAPI.get_similar_topics('findrelatedconcepts',{:text => @concepts })
 
 		erb :similar_topics
+	elsif @query.downcase == "devon bradley"
+		erb :hire_me
 	else 
 		@similar_topics = HPIdolAPI.get_similar_topics('findrelatedconcepts',{:text => @query })
 		erb :similar_topics
