@@ -3,7 +3,10 @@
 	<h3 class="text-center logo">About <%= @query.capitalize %></h3>
 	<br>
 	<% @query_results.each do |product| %>
-		<a class="text-center text-muted" href="<%= product[:url] %>" target="_blank"><h3><%= product[:title] %></h3><h4>By <%= product[:author]%></h4></a>
+		<a class="text-center text-muted" href="<%= product[:url] %>" target="_blank"><h3><%= product[:title] %></h3>
+		<% if product[:author] != nil %>
+			<h4>By <%= product[:author]%></h4>
+		<% end %></a>
 		<button class="btn btn-success center-block" href="<%= product[:url] %>">Buy on Amazon</button>
 		<br>
 	<% end %>
