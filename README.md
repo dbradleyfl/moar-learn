@@ -18,4 +18,12 @@ Moar-Learn!
 
 ##The App
 
-The "Moar Learn" app is very simple. It asks the user to input a topic that they like, then uses the HP IDOL OnDemand API to suggest related topics. The user can then pick a related topic that they are interested in learning "moar" about, and the app will use the Amazon Product Advertising API to suggest some books on the topic so that the user can learn "moar"!
+Its easy to go to Amazon and search for a book when you know what your looking for, but what do you do when you just want to expand your knowledge? "Moar Learn" is a book recommendation engine which answers that question.
+
+You can type in the name of a topic you know and love, then "Moar Learn" will suggest some related topics that you might enjoy learning "moar" about. After you pick a topic, the app will recommend books on the topic, which are available on Amazon.
+
+Alternatively, you can enter a URL and "Moar Learn" will identify the topic of the site, suggest the topic and related topics for reading, then recommend books based on the topic you select.
+
+I hope you enjoy discovering new things to read and learn about!
+
+#####Devon Bradley
