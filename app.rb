@@ -47,6 +47,19 @@ class HPIdolAPI
 		similar_topics
 	end
 
+	def self.get_concepts(handler, data=Hash.new)
+		concepts = []
+
+	    data[:apikey]=$apikey
+	    response=Unirest.post "#{$url}/1/api/sync/#{handler}/v1", 
+	                        headers:{ "Accept" => "application/json" }, 
+	                        parameters: data
+	    response.body["concepts"].shift(3).each do |concept|
+	    	concepts << concept["concept"]
+	    end
+
+	    p concepts.join(' ')
+	end
 end
 
 # controllers / routes
@@ -58,8 +71,17 @@ end
 get '/similar_topics' do
 	@query = params[:query]
 
-	@similar_topics = HPIdolAPI.get_similar_topics('findrelatedconcepts',{:text => @query })
-	erb :similar_topics
+	if @query.downcase.include?("http://") || @query.downcase.include?("https://")
+
+		@concepts = HPIdolAPI.get_concepts('extractconcepts',{:url => @query})
+
+		@similar_topics = HPIdolAPI.get_similar_topics('findrelatedconcepts',{:text => @concepts })
+
+		erb :similar_topics
+	else 
+		@similar_topics = HPIdolAPI.get_similar_topics('findrelatedconcepts',{:text => @query })
+		erb :similar_topics
+	end
 end
 
 get '/search/:query' do
