@@ -1,17 +1,18 @@
 <div class="row big-top-margin">
   <div class="col-xs-12">
-    <h1 class="text-center logo">Moar Learn!</h1>
+    <h1 class="text-center logo"><a href="/">Moar Learn!</a></h1>
+    <h5 class="text-center logo">Book Recommendation Engine</h5>
   </div>
   <div class="col-sm-6 col-sm-offset-3">
     <form action="/similar_topics" method="get">
-      <input type="text" name="query" class="form-control text-center margin-top-30" placeholder="Enter a topic that you love here! E.g. Calculus " required maxlength="50"></input>
+      <input type="text" name="query" class="form-control text-center margin-top-30" placeholder="Enter a topic or URL " required></input>
         <button type="submit" class="btn btn-success center-block margin-top-30">Search</button>
     </form>
   </div>
 </div>
 
 <div class="top-button">
-  <button class="btn btn-default" data-toggle="modal" data-target="#help-modal">Help</button>
+  <button class="btn btn-default" data-toggle="modal" data-target="#help-modal">Instructions</button>
 </div>
 
 <footer>
@@ -26,14 +27,21 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h3 class="modal-title text-center" id="myModalLabel"> Help!</h3>
+        <h3 class="modal-title text-center" id="myModalLabel">Instructions</h3>
       </div>
       <div class="modal-body">
         <h4 class="text-center">
-          <p>"Moar Learn" is a book recommendation engine. Type in the name of a topic you know and love, then we will suggest some related topics that you might be interested in learning "moar" about. After you pick a topic, we will recommend some books on the topic, which are available on <a class="text-success" href="http://amazon.com">Amazon</a>.</p>
-          <p>Enjoy discovering new things to learn about!</p>
+          <p>Its easy to go to <a class="text-success" href="http://amazon.com">Amazon</a> and search for a book when you know what your looking for, but what do you do when you just want to expand your knowledge? "Moar Learn" is a book recommendation engine which answers that question.
+
+          <p>You can type in the name of a topic you know and love, then "Moar Learn" will suggest some related topics that you might enjoy learning "moar" about. After you pick a topic, the app will recommend books on the topic, which are available on <a class="text-success" href="http://amazon.com">Amazon</a>.</p>
+
+          <p>Alternatively, you can enter a URL and "Moar Learn" will identify the topic of the site, suggest the topic and related topics for reading, then recommend books based on the topic you select.</p>
+
+          <p>I hope you enjoy discovering new things to read and learn about!</p>
+
+          <h4 class="text-center logo">Devon Bradley</h4>
         </h4>
-      </div>
+      </h4>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
