@@ -7,7 +7,7 @@
 		<% if product[:author] != nil %>
 			<h4>By <%= product[:author]%></h4>
 		<% end %></a>
-		<button class="btn btn-success center-block" href="<%= product[:url] %>">Buy on Amazon</button>
+		<a href="<%= product[:url] %>" target="_blank"><button class="btn btn-success center-block">Buy on Amazon</button></a>
 		<br>
 	<% end %>
 </div>
