@@ -11,6 +11,11 @@ a:hover{
 	font-family: 'Rock Salt', sans-serif;
 }
 
+.hp-logo{
+	padding: 50px;
+	width: 300px;
+}
+
 .margin-top-30{
 	margin-top: 30px;
 }
