@@ -3,6 +3,8 @@ Moar-Learn!
 
 #My Topcoder 2014 API Mashathon Project
 
+#UPDATE: This project was selected as a top 10 finalist and presented/demo'd live to a panel of judges and TopCoder attendees!
+
 ##The Challenge
 - **[TopCoder Open 2014 Mashathon](http://community.topcoder.com/tco14/developer-events/win-at-tco14/#winMashathon)**
 
